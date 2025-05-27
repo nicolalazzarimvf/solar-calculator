@@ -1,0 +1,255 @@
+/* Solar Calculator Styles */
+
+:root {
+  --solar-color-bg: #053c5e;
+  --solar-color-accent: #06ab49;
+  --solar-color-text: #ffffff;
+  --solar-color-error: #ff6b6b;
+  --solar-color-bg-dark: #032c45;
+}
+
+#calculator {
+  font-family: Arial, sans-serif;
+  background: var(--solar-color-bg);
+  color: var(--solar-color-text);
+  padding: 2rem;
+  max-width: 1020px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#postcode-lookup-context {
+  width: auto !important;
+}
+
+.solar-calc__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.solar-calc__intro {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.solar-calc__label {
+  font-weight: bold;
+  display: block;
+  margin: 1rem 0 0.5rem;
+}
+
+#postcode-lookup-context input[type="text"].idpc-input {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0.6rem;
+  border: 2px solid var(--solar-color-accent);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  color: #000;
+}
+
+.solar-calc__bedroom-group {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.solar-calc__bedroom-btn {
+  flex: 1;
+  padding: 0.6rem;
+  border: 2px solid var(--solar-color-accent);
+  background: transparent;
+  color: var(--solar-color-text);
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.solar-calc__bedroom-btn.is-selected {
+  background: var(--solar-color-accent);
+  color: var(--solar-color-bg);
+}
+
+.solar-calc__submit,
+.solar-calc__quote {
+  background: var(--solar-color-accent);
+  color: var(--solar-color-text);
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.solar-calc__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: var(--solar-color-bg);
+}
+
+.solar-calc__result {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.solar-calc__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.solar-calc__col--image {
+  flex: 0 0 calc(40% - 1rem);
+  max-width: calc(40% - 1rem);
+}
+
+.solar-calc__col--data {
+  flex: 0 0 calc(60% - 1rem);
+  max-width: calc(60% - 1rem);
+}
+
+.solar-calc__grid-image {
+  flex: 2 1 66.666%;
+  max-width: 66.666%;
+}
+
+.solar-calc__grid-details {
+  flex: 1 1 33.333%;
+  max-width: 33.333%;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.solar-calc__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.solar-calc__details {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.solar-calc__details li {
+  background-color: var(--solar-color-bg-dark);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.solar-calc__error {
+  color: var(--solar-color-error);
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+#lookup-wrapper {
+  display: block;
+  padding: 10px;
+  border: 1px dashed var(--solar-color-accent);
+  background: #ffffff;
+  margin-bottom: 1rem;
+}
+
+#lookup-wrapper input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 2px solid var(--solar-color-accent);
+  border-radius: 4px;
+  color: #000;
+  background-color: #fff;
+}
+
+/* Style override for Ideal Postcodes injected fields */
+#postcode-lookup-context input[type="text"].idpc-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid var(--solar-color-accent);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  color: #000;
+}
+
+#postcode-lookup-context .idpc-button {
+  background-color: var(--solar-color-accent);
+  color: var(--solar-color-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+#postcode-lookup-context select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid var(--solar-color-accent);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Custom dropdown styles */
+.solar-calc__dropdown {
+  width: 100%;
+  max-height: 240px;
+  overflow-y: auto;
+  border: 2px solid var(--solar-color-accent);
+  border-radius: 6px;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 0.25rem 0;
+  margin-top: 0.5rem;
+  appearance: none;
+}
+
+.solar-calc__dropdown option {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.solar-calc__dropdown option:hover,
+.solar-calc__dropdown option:focus {
+  background-color: #f0f8f4;
+}
+
+@media (max-width: 768px) {
+  .solar-calc__col--image,
+  .solar-calc__col--data {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.solar-calc__details svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  stroke: var(--solar-color-text);
+}
